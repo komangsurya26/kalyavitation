@@ -7,7 +7,7 @@ export function Features() {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="h-[50vh] lg:h-[90vh] relative">
           <Image
-            src="/hero1.webp"
+            src="/images/landing/hero1.webp"
             alt="Hero"
             width={1333}
             height={1333}
@@ -33,7 +33,7 @@ export function Features() {
 
         <div className="h-[50vh] lg:h-[90vh] relative">
           <Image
-            src="/feature/frame.webp"
+            src="/images/landing/frame.webp"
             alt="Hero"
             width={1333}
             height={1333}
@@ -56,7 +56,7 @@ export function Features() {
       </div>
       <div className="h-[50vh] lg:h-[90vh] relative">
         <Image
-          src="/feature/dashboard.webp"
+          src="/images/landing/dashboard.webp"
           alt="Hero"
           width={1333}
           height={1333}

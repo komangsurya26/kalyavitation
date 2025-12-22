@@ -66,7 +66,7 @@ export function Products() {
                   </p>
                   <div className="grid grid-cols-2 gap-2 mt-2">
                     <Link
-                      href={`/${product.slug}`}
+                      href={`/templates/${product.slug}`}
                       className="text-xs sm:text-sm font-medium h-7 sm:h-8 flex items-center justify-center border border-neutral-800 rounded-full"
                     >
                       Review
