@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { Marcellus, Poppins } from "next/font/google";
+import {
+  marcellus,
+  poppins,
+  playfairDisplay,
+  pinyonScript,
+  cormorant,
+} from "@/lib/fonts";
 import "./globals.css";
-
-const marcellus = Marcellus({
-  weight: ["400"],
-  subsets: ["latin"],
-  variable: "--font-marcellus",
-});
-
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-poppins",
-});
 
 export const metadata: Metadata = {
   title: "Kalyavitation | Solusi Mudah Buat Undangan Digital",
@@ -61,7 +55,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${marcellus.variable} ${poppins.variable} antialiased`}>
+      <body
+        className={`
+          ${marcellus.variable} 
+          ${poppins.variable} 
+          ${playfairDisplay.variable} 
+          ${pinyonScript.variable} 
+          ${cormorant.variable} 
+          antialiased
+        `}
+      >
         <main>{children}</main>
       </body>
     </html>

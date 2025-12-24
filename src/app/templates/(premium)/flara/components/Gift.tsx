@@ -11,13 +11,13 @@ export function Gift() {
       <div className="flex flex-col gap-6">
         <div className="w-[250px] h-[180px] relative">
           <Image
-            src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766311735/invitations/2/e2cslgvwnhsnsl6g5tt5.webp"
+            src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766574530/foto_dummy/lume6_bazxai.webp"
             alt=""
             fill
             className="object-cover w-full h-full"
           />
         </div>
-        <h1 className="uppercase font-marcellus text-4xl">Wedding Gift</h1>
+        <h1 className="uppercase font-cormorant text-4xl">Wedding Gift</h1>
         <p className="font-poppins font-extralight text-sm leading-4">
           Tanpa mengurangi rasa hormat bagi tamu yang ingin mengirimkan hadiah
           kepada kami, bisa melalui nomor rekening dibawah ini:

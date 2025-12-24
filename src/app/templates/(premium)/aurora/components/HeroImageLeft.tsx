@@ -28,19 +28,21 @@ export function HeroImageLeft() {
   return (
     <>
       <Image
-        src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766574532/foto_dummy/lume7_mqybzm.webp"
+        src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766570846/foto_dummy/ARP_6898-1-scaled-6846fd3134490_pddppc.webp"
         alt="Hero"
         fill
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-black/40" />
       <div className="absolute inset-0 text-white flex items-end py-32 px-16">
         <div ref={containerRef} className="space-y-2 uppercase">
-          <h1 className="font-cormorant font-normal text-item">
-            The Wedding of
+          <h1 className="font-poppins font-normal text-item">The Wedding of</h1>
+          <h1 className="font-playfair-display text-5xl text-item">
+            Komang & Surya
           </h1>
-          <h1 className="font-cormorant text-5xl text-item">Komang & Surya</h1>
+          <p className="font-sans text-item uppercase">
+            Sabtu, 06 Januari 2025
+          </p>
         </div>
       </div>
     </>

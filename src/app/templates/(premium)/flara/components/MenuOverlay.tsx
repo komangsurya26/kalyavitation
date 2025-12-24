@@ -2,8 +2,15 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import clsx from "clsx";
 
-export function MenuOverlay({ opened }: { opened: boolean }) {
+export function MenuOverlay({
+  opened,
+  background,
+}: {
+  opened: boolean;
+  background?: string;
+}) {
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -45,7 +52,10 @@ export function MenuOverlay({ opened }: { opened: boolean }) {
   return (
     <div
       ref={overlayRef}
-      className="fixed z-40 rounded-[20px] bg-white/20 backdrop-blur-sm hidden"
+      className={clsx(
+        "fixed z-40 rounded-[20px] backdrop-blur-sm hidden",
+        background || "bg-white/20"
+      )}
     >
       <nav className="p-10 text-white space-y-3 text-2xl font-marcellus"></nav>
     </div>

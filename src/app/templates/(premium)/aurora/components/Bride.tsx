@@ -5,30 +5,30 @@ export function Bride() {
   return (
     <div className="relative h-screen">
       <Image
-        src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766574479/foto_dummy/lume2_lji1to.webp"
+        src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766570962/foto_dummy/IMG_6784-2_ndotaq.webp"
         alt="Bride"
         fill
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-black/20" />
-      <div className="absolute inset-0 top-[80vh] bg-linear-to-t from-black/70 via-black/50 to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 top-[70vh] bg-linear-to-t from-black/70 via-black/50 to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bottom-[70vh] bg-linear-to-b from-black/70 via-black/50 to-transparent pointer-events-none"></div>
       <div className="absolute inset-0 px-10 py-14 flex items-end">
         <div className="flex flex-col gap-3 w-full">
-          <h1 className="text-white text-lg font-cormorant">The Bride</h1>
-          <h1 className="text-white text-3xl font-cormorant">
+          <h1 className="text-white text-3xl font-pinyon-script">The Bride</h1>
+          <h1 className="text-white text-3xl font-playfair-display">
             Ni Putu Ayu Dewi
           </h1>
-          <div className="h-px w-full bg-white"></div>
-          <h1 className="text-white text-sm capitalize font-marcellus">
+          <div className="h-px w-1/4 bg-white"></div>
+          <h1 className="text-white text-lg capitalize font-playfair-display">
             putri pertama dari
           </h1>
-          <h1 className="text-white text-sm font-marcellus">
+          <h1 className="text-white text-sm font-poppins font-extralight">
             Bapak Nama Bapak & <br /> Ibu Nama Ibu
           </h1>
           <a
             href="https://wa.me/628123456789"
-            className="flex items-center gap-2 text-white rounded-full bg-white/30 border w-fit py-1 px-3"
+            className="flex items-center gap-2 text-white"
           >
             <FaInstagram className="w-3 h-3" />
             <span className="text-sm font-light font-poppins">Username</span>

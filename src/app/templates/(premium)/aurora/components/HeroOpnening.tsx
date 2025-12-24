@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { HamburgerMenu } from "./HamburgerMenu";
-import { AudioControl } from "./AudioControl";
+import { HamburgerMenu } from "@/app/templates/(premium)/flara/components/HamburgerMenu";
+import { AudioControl } from "@/app/templates/(premium)/flara/components/AudioControl";
 
 export function HeroOpening({
   scrollRef,
@@ -106,38 +106,37 @@ export function HeroOpening({
       ref={containerRef}
       className="relative h-screen w-full overflow-hidden"
     >
-      <HamburgerMenu visible={opened} />
+      <HamburgerMenu visible={opened} background="bg-black/20" />
       <AudioControl
         visible={showAudio}
         playing={audioPlaying}
         toggle={toggleAudio}
+        background="bg-black/20"
       />
       {/* OPENING */}
       <div
         ref={openingRef}
         className="absolute inset-0 grid grid-flow-col grid-rows-2"
       >
-        <div className="hero-item flex flex-col items-center justify-center font-cormorant gap-3 text-white">
+        <div className="hero-item flex flex-col items-center justify-center gap-3 text-white">
           <h1 className="uppercase text-sm">the wedding of</h1>
-          <h1 className="uppercase text-3xl">komang & surya</h1>
-          <h1 className="uppercase text-xs font-marcellus">
-            sabtu, 24 desember 2025
+          <h1 className="uppercase font-playfair-display text-3xl">
+            komang & surya
           </h1>
+          <h1 className="uppercase text-xs">sabtu, 24 desember 2025</h1>
         </div>
 
         <div className="hero-item flex flex-col items-center justify-center gap-3 text-white">
-          <h1 className="font-extralight text-sm font-poppins">
-            Yth. Bapak/Ibu/Saudara/i
-          </h1>
-          <h1 className="uppercase font-cormorant">Tamu Undangan</h1>
-          <h1 className="font-poppins text-xs font-extralight max-w-[40ch] text-center">
+          <h1 className="text-sm font-poppins">Yth. Bapak/Ibu/Saudara/i</h1>
+          <h1 className="uppercase font-poppins">Tamu Undangan</h1>
+          <h1 className="font-poppins text-xs max-w-[40ch] text-center">
             Tanpa mengurangi rasa hormat, kami mengundang anda untuk menghadiri
             acara pernikahan kami.
           </h1>
 
           <button
             onClick={handleOpen}
-            className="uppercase font-cormorant px-4 py-2 bg-white/20 rounded-full text-white text-sm hover:bg-white hover:text-black transition"
+            className="uppercase font-poppins px-4 py-2 border text-white text-sm hover:bg-white hover:text-black transition"
           >
             buka undangan
           </button>
@@ -149,23 +148,29 @@ export function HeroOpening({
         ref={nextRef}
         className="absolute inset-0 grid-flow-col grid-rows-2 hidden"
       >
-        <div className="hero-item flex flex-col items-center justify-center font-cormorant gap-3 text-white">
-          <h1 className="uppercase text-sm">the wedding of</h1>
-          <h1 className="uppercase text-3xl">komang & surya</h1>
-          <h1 className="uppercase text-xs font-marcellus">
-            sabtu, 24 desember 2025
-          </h1>
+        <div className="hero-item grid grid-cols-3 justify-center pt-24 text-white font-sans font-semibold">
+          <div className="border-y border-white/20 py-1 h-fit mx-8">
+            <h1 className="uppercase text-sm text-center">sabtu</h1>
+          </div>
+          <div className="border-y border-white/20 py-1 h-fit mx-8">
+            <h1 className="uppercase text-sm text-center">06 jan</h1>
+          </div>
+          <div className="border-y border-white/20 py-1 h-fit mx-8">
+            <h1 className="uppercase text-sm text-center">2025</h1>
+          </div>
         </div>
 
-        <div className="hero-item flex flex-col items-center justify-center gap-3 text-white px-2">
-          <h1 className="font-serif text-sm font-normal max-w-[50ch] text-center">
-            &quot;Two are better than one, because they have a good reward for
-            their toil. For if they fall, one will lift up his fellow. But woe
-            to him who is alone when he falls and has not another to lift him
-            up.&quot;
+        <div className="hero-item flex flex-col items-center justify-end gap-3 px-2 pb-24">
+          <h1 className="font-pinyon-script text-white">The wedding of</h1>
+          <h1 className="uppercase text-2xl text-center font-playfair-display text-white/80">
+            komang & surya
           </h1>
-          <h1 className="font-poppins text-sm font-light max-w-[40ch] text-center">
-            Ecclesiastes 4:9-10
+          <h1 className="font-poppins text-xs font-normal max-w-[90ch] text-center text-white/70">
+            Ihaiva stam mā vi yaustam, Visvām āyur vyasnutam. Krindantau putrair
+            naptrbhih, Modamānau sve grhe. (Rgveda : X.85.42) Artinya : Wahai
+            pasangan suami-isteri, semoga kalian tetap bersatu dan tidak pernah
+            terpisahkan. Semoga kalian mencapai hidup penuh kebahagiaan, tinggal
+            di rumah yang penuh kegembiraan bersama seluruh keturunanmu.
           </h1>
         </div>
       </div>
@@ -176,9 +181,8 @@ export function HeroOpening({
         loop
         preload="auto"
       />
-      {opened && (
-        <div className="absolute inset-0 top-[70vh] bg-linear-to-t from-black/70 via-black/50 to-transparent pointer-events-none"></div>
-      )}
+      <div className="absolute inset-0 top-[70vh] bg-linear-to-t from-black/70 via-black/50 to-transparent pointer-events-none -z-1"></div>
+      <div className="absolute inset-0 bottom-[70vh] bg-linear-to-b from-black/70 via-black/50 to-transparent pointer-events-none -z-1"></div>
     </div>
   );
 }

@@ -42,6 +42,9 @@
 
   --font-marcellus: var(--font-marcellus);
   --font-poppins: var(--font-poppins);
+  --font-playfair-display: var(--font-playfair-display);
+  --font-pinyon-script: var(--font-pinyon-script);
+  --font-cormorant: var(--font-cormorant);
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;

@@ -4,7 +4,7 @@ export function Rsvp() {
   return (
     <div className="p-10 text-white">
       <div className="flex flex-col items-center gap-6">
-        <h2 className="text-4xl font-marcellus uppercase">RSVP & DOA</h2>
+        <h2 className="text-4xl font-cormorant uppercase">RSVP & DOA</h2>
         <p className="text-sm font-poppins text-center font-extralight leading-4">
           Bagi tamu undangan yang akan hadir di acara pernikahan kami silahkan
           kirimkan konfirmasi kehadiran dengan mengisi form berikut:

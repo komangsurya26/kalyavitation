@@ -1,12 +1,12 @@
 export function Event() {
   return (
     <div className="px-10 py-24 text-white">
-      <h1 className="uppercase font-marcellus text-xl text-center mb-5">
+      <h1 className="uppercase font-cormorant text-xl text-center mb-5">
         Save our date
       </h1>
       <div className="flex flex-col gap-14">
         <div className="flex flex-col items-center gap-2">
-          <h1 className="font-marcellus text-3xl">PEMBERKATAN</h1>
+          <h1 className="font-cormorant text-3xl uppercase">PEMBERKATAN</h1>
           <div className="flex flex-col gap-2 text-center">
             <span className="uppercase font-marcellus font-light">
               Sabtu, 22 Desember 2025
@@ -34,7 +34,7 @@ export function Event() {
           </a>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <h1 className="font-marcellus text-3xl">Resepsi</h1>
+          <h1 className="font-cormorant text-3xl uppercase">Resepsi</h1>
           <div className="flex flex-col gap-2 text-center">
             <span className="uppercase font-marcellus font-light">
               Minggu, 23 Desember 2025
