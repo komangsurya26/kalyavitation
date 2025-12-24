@@ -7,6 +7,10 @@ import { Background } from "./components/Background";
 import { Bride } from "./components/Bride";
 import { Groom } from "./components/Groom";
 import { LoveStory } from "./components/LoveStory";
+import { Countdown } from "./components/Countdown";
+import { Event } from "./components/Event";
+import { Gallery } from "./components/Gallery";
+import { Rsvp } from "./components/Rsvp";
 
 export default function AuroraPage() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -29,13 +33,13 @@ export default function AuroraPage() {
 
         <LoveStory />
 
-        {/* <Countdown /> */}
+        <Countdown />
 
-        {/* <Event /> */}
+        <Event />
 
-        {/* <Gallery /> */}
+        <Gallery />
 
-        {/* <Rsvp /> */}
+        <Rsvp />
 
         {/* <Gift /> */}
 

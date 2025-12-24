@@ -30,7 +30,7 @@ export function Countdown() {
           href=""
           className="px-4 py-1 bg-white/20 rounded-full hover:bg-white hover:text-black text-white"
         >
-          <span className="font-marcellus font-light text-sm">
+          <span className="font-marcellus font-light text-sm uppercase">
             Simpan Tanggal
           </span>
         </a>

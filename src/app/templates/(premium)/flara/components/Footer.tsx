@@ -12,7 +12,7 @@ export function Footer() {
           Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila
           Bapak/Ibu/Saudara/i berkenan hadir di hari bahagia kami.
         </p>
-        <h1 className="text-center font-marcellus text-2xl">Komang & Surya</h1>
+        <h1 className="text-center font-cormorant uppercase text-2xl">Komang & Surya</h1>
         <div className="h-[280px] w-[200px]">
           <img
             src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766574530/foto_dummy/lume6_bazxai.webp"

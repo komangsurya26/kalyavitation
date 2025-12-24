@@ -137,7 +137,7 @@ export function HeroOpening({
 
           <button
             onClick={handleOpen}
-            className="uppercase font-cormorant px-4 py-2 bg-white/20 rounded-full text-white text-sm hover:bg-white hover:text-black transition"
+            className="uppercase font-marcellus px-4 py-2 bg-white/20 rounded-full text-white text-sm hover:bg-white hover:text-black transition"
           >
             buka undangan
           </button>
@@ -177,7 +177,7 @@ export function HeroOpening({
         preload="auto"
       />
       {opened && (
-        <div className="absolute inset-0 top-[70vh] bg-linear-to-t from-black/70 via-black/50 to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 top-[70vh] bg-linear-to-t from-black/60 via-black/30 to-transparent pointer-events-none"></div>
       )}
     </div>
   );
