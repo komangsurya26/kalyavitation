@@ -53,6 +53,24 @@ export const TEMPLATES: Record<string, Template[]> = {
       price: "Rp 0",
       originalPrice: "Rp 130.000",
     },
+    {
+      id: 5,
+      name: "Elena | Premium",
+      slug: "elena",
+      category: TemplateCategory.PREMIUM,
+      cover: "/images/landing/hero5.webp",
+      price: "Rp 0",
+      originalPrice: "Rp 120.000",
+    },
+    {
+      id: 6,
+      name: "Elena | Premium",
+      slug: "elena",
+      category: TemplateCategory.PREMIUM,
+      cover: "/images/landing/hero5.webp",
+      price: "Rp 0",
+      originalPrice: "Rp 120.000",
+    },
   ],
   adat: [
     {

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export function Features() {
   return (
@@ -22,12 +21,12 @@ export function Features() {
               Dashboard & Custom <br /> Invitation
             </h1>
 
-            <Link
-              href="/dashboard"
+            <a
+              href="https://app.kalyavitation.com"
               className="px-5 py-0.5 hover:bg-white font-light hover:text-black text-white rounded-full border border-white"
             >
               Detail
-            </Link>
+            </a>
           </div>
         </div>
 

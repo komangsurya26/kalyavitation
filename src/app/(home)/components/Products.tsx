@@ -36,9 +36,9 @@ export function Products() {
 
         {["premium", "adat", "klasik", "modern"].map((category) => (
           <TabsContent key={category} value={category} className="w-full mt-10">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 space-y-8">
               {TEMPLATES[category as keyof typeof TEMPLATES]?.map((product) => (
-                <div key={product.id} className="flex flex-col gap-2">
+                <div key={product.id} className="flex flex-col gap-5">
                   <div className="aspect-square bg-gray-100 overflow-hidden">
                     {product.cover ? (
                       <Image
@@ -55,25 +55,27 @@ export function Products() {
                       </div>
                     )}
                   </div>
-                  <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-poppins">
-                    {product.name}
-                  </h1>
-                  <p className="text-xs md:text-sm lg:text-base space-x-2">
-                    <span className="text-red-500">{product.price}</span>
-                    <span className="line-through">
-                      {product.originalPrice}
-                    </span>
-                  </p>
-                  <div className="grid grid-cols-2 gap-2 mt-2">
+                  <div className="flex flex-col gap-1">
+                    <h1 className="text-xs sm:text-sm md:text-base font-poppins">
+                      {product.name}
+                    </h1>
+                    <p className="text-xs md:text-sm lg:text-base space-x-2">
+                      <span className="text-red-500">{product.price}</span>
+                      <span className="line-through">
+                        {product.originalPrice}
+                      </span>
+                    </p>
+                  </div>
+                  <div className="flex gap-2 overflow-x-auto hide-scrollbar uppercase">
                     <Link
                       href={`/templates/${product.slug}`}
-                      className="text-xs sm:text-sm font-medium h-7 sm:h-8 flex items-center justify-center border border-neutral-800 rounded-full"
+                      className="text-xs sm:text-sm font-normal py-1 px-4 flex items-center justify-center border border-neutral-800 rounded-full"
                     >
                       Review
                     </Link>
                     <a
                       href="https://wa.me/6287782057548"
-                      className="text-xs sm:text-sm font-medium h-7 sm:h-8 flex items-center justify-center rounded-full bg-neutral-800 text-white"
+                      className="text-xs sm:text-sm font-normal py-1 px-4 flex items-center justify-center rounded-full bg-neutral-800 text-white"
                     >
                       Gunakan
                     </a>
