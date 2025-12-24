@@ -153,8 +153,8 @@ export function HeroOpening({
           <h1 className="uppercase text-xs">sabtu, 24 desember 2025</h1>
         </div>
 
-        <div className="hero-item flex flex-col items-center justify-center gap-3 text-white">
-          <h1 className="font-serif text-sm font-normal max-w-[50ch] text-center ">
+        <div className="hero-item flex flex-col items-center justify-center gap-3 text-white px-2">
+          <h1 className="font-serif text-sm font-normal max-w-[50ch] text-center">
             &quot;Two are better than one, because they have a good reward for
             their toil. For if they fall, one will lift up his fellow. But woe
             to him who is alone when he falls and has not another to lift him

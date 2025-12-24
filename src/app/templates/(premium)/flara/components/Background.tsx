@@ -5,6 +5,8 @@ export function Background() {
         autoPlay
         loop
         muted
+        playsInline
+        preload="auto"
         className="fixed top-0 right-0 h-screen w-full lg:w-1/3 object-cover -z-10"
       >
         <source

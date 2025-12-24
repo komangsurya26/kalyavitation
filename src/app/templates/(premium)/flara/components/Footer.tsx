@@ -13,12 +13,13 @@ export function Footer() {
           Bapak/Ibu/Saudara/i berkenan hadir di hari bahagia kami.
         </p>
         <h1 className="text-center font-marcellus text-2xl">Komang & Surya</h1>
-        <Image
-          src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1764751462/invitations/4/vrpyazwa1hqpzdf4jiga.webp"
-          alt="komang & surya"
-          width={200}
-          height={200}
-        />
+        <div className="h-[280px] w-[200px]">
+          <img
+            src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1764057313/invitations/1/esrk59ihbjdf7fiba4wv.webp"
+            alt="komang & surya"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
       <div className="flex flex-col gap-2 items-center justify-center">
         <h1 className="text-center font-marcellus text-2xl">Kalyavitation</h1>

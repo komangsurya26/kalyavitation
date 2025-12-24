@@ -13,7 +13,7 @@ export function Groom() {
       />
       <div className="absolute inset-0 bg-black/20" />
       <div className="absolute inset-0 top-[80vh] bg-linear-to-t from-black/70 via-black/50 to-transparent pointer-events-none"></div>
-      <div className="absolute inset-0 px-10 py-24 flex items-end">
+      <div className="absolute inset-0 px-10 py-14 flex items-end">
         <div className="flex flex-col gap-3 w-full">
           <h1 className="text-white text-lg font-marcellus">The Groom</h1>
           <h1 className="text-white text-3xl font-marcellus">
