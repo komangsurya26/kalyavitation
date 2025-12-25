@@ -17,7 +17,7 @@ export function LoveStory() {
         {Array.from({ length: 2 }).map((_, index) => (
           <div key={index}>
             <h1 className="font-marcellus uppercase">22 Desember 2025</h1>
-            <p className="font-poppins font-light text-sm">
+            <p className="font-poppins font-light text-xs">
               Awal bertemu, Lorem ipsum dolor sit, amet consectetur adipisicing
               elit. Iusto quod quas perferendis aperiam porro quam sint minima
               alias eaque veritatis dignissimos recusandae optio delectus sequi

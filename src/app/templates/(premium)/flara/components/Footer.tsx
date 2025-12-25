@@ -8,7 +8,7 @@ export function Footer() {
         <h1 className="font-cormorant text-3xl">
           THANK YOU FOR YOUR ATTENDANCE
         </h1>
-        <p className="font-poppins font-extralight text-sm">
+        <p className="font-poppins font-light text-xs">
           Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila
           Bapak/Ibu/Saudara/i berkenan hadir di hari bahagia kami.
         </p>
@@ -25,7 +25,7 @@ export function Footer() {
       </div>
       <div className="space-y-2 text-center">
         <h1 className="text-center font-marcellus text-2xl">Kalyavitation</h1>
-        <p className="text-center font-poppins font-extralight text-sm">
+        <p className="text-center font-poppins font-light text-xs">
           © 2025 Kalyavitation. Digital Wedding Invitation
         </p>
         <div className="flex gap-4 items-center justify-center">

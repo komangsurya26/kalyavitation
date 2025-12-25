@@ -2,7 +2,7 @@ export function Countdown() {
   return (
     <div className="px-10 text-white flex flex-col gap-5 items-center">
       <h1 className="uppercase font-cormorant text-3xl">Save the Date</h1>
-      <p className="capitalize font-poppins font-light text-sm text-center">
+      <p className="capitalize font-poppins font-light text-xs text-center">
         &quot;Pernikahan adalah ibadah, dan setiap ibadah bermuara pada
         cinta-Nya sebagai tujuan. Sudah sewajarnya setiap upaya meraih cinta-Nya
         dilakukan dengan sukacita.&quot;

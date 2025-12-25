@@ -18,7 +18,7 @@ export function Gift() {
           />
         </div>
         <h1 className="uppercase font-cormorant text-4xl">Wedding Gift</h1>
-        <p className="font-poppins font-extralight text-sm leading-4">
+        <p className="font-poppins font-light text-xs leading-4">
           Tanpa mengurangi rasa hormat bagi tamu yang ingin mengirimkan hadiah
           kepada kami, bisa melalui nomor rekening dibawah ini:
         </p>

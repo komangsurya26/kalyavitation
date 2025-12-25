@@ -28,7 +28,7 @@ export function Bride() {
           </h1>
           <a
             href="https://wa.me/628123456789"
-            className="flex items-center gap-2 text-white rounded-full bg-white/30 border w-fit py-1 px-3"
+            className="flex items-center gap-2 text-white rounded-full bg-white/30 w-fit py-1 px-3"
           >
             <FaInstagram className="w-3 h-3" />
             <span className="text-sm font-light font-marcellus">Username</span>

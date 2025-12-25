@@ -3,7 +3,7 @@ export function Gallery() {
     <div className="p-10 text-white">
       <div className="space-y-6 text-center">
         <h2 className="text-4xl font-cormorant uppercase">Gallery</h2>
-        <p className="text-sm font-poppins font-extralight leading-4">
+        <p className="text-xs font-poppins font-light leading-4">
           I was created in time to fill your time, and I use all the time in my
           live to love you.
         </p>
