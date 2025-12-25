@@ -11,6 +11,10 @@ import { Countdown } from "./components/Countdown";
 import { Event } from "./components/Event";
 import { Gallery } from "./components/Gallery";
 import { Rsvp } from "./components/Rsvp";
+import { Wishes } from "./components/Wishes";
+import { Gift } from "./components/Gift";
+import { Footer } from "./components/Footer";
+import { FixedBackground } from "./components/FixedBackground";
 
 export default function AuroraPage() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -39,11 +43,13 @@ export default function AuroraPage() {
 
         <Gallery />
 
-        <Rsvp />
+        <FixedBackground bgImage="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766570113/foto_dummy/DSC01597-3-684933cc00cc3_f04pjg.webp">
+          <Rsvp />
+          <Wishes />
+          <Gift />
+        </FixedBackground>
 
-        {/* <Gift /> */}
-
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </main>
   );

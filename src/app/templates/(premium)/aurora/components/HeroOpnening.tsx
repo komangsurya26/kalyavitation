@@ -37,20 +37,17 @@ export function HeroOpening({
   }, []);
 
   useEffect(() => {
-    if (!scrollRef?.current) return;
+    const el = scrollRef.current;
+    if (!el) return;
 
-    if (!opened) {
-      scrollRef.current.style.overflowY = "hidden";
+    if (opened) {
+      el.classList.remove("overflow-hidden");
+      el.classList.add("overflow-y-scroll", "snap-y", "snap-mandatory");
     } else {
-      scrollRef.current.style.overflowY = "auto";
+      el.classList.add("overflow-hidden");
+      el.classList.remove("overflow-y-scroll", "snap-y", "snap-mandatory");
     }
-
-    return () => {
-      if (scrollRef.current) {
-        scrollRef.current.style.overflowY = "auto";
-      }
-    };
-  }, [opened, scrollRef]);
+  }, [opened]);
 
   const handleOpen = () => {
     if (opened) return;
@@ -104,7 +101,7 @@ export function HeroOpening({
   return (
     <div
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden"
+      className="relative h-screen w-full overflow-hidden snap-start"
     >
       <HamburgerMenu visible={opened} background="bg-black/20" />
       <AudioControl

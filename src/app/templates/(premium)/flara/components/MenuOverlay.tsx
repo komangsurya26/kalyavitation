@@ -53,7 +53,7 @@ export function MenuOverlay({
     <div
       ref={overlayRef}
       className={clsx(
-        "fixed z-40 rounded-[20px] backdrop-blur-sm hidden",
+        "fixed z-90 rounded-[20px] backdrop-blur-sm hidden",
         background || "bg-white/20"
       )}
     >

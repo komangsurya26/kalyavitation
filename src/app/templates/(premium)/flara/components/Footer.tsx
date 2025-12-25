@@ -4,29 +4,31 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 export function Footer() {
   return (
     <footer className="h-screen flex flex-col justify-between py-10 px-5 text-white">
-      <div className="flex flex-col gap-2 items-center justify-center">
-        <h1 className="text-center font-cormorant text-3xl">
+      <div className="space-y-2 text-center">
+        <h1 className="font-cormorant text-3xl">
           THANK YOU FOR YOUR ATTENDANCE
         </h1>
-        <p className="text-center font-poppins font-extralight text-sm">
+        <p className="font-poppins font-extralight text-sm">
           Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila
           Bapak/Ibu/Saudara/i berkenan hadir di hari bahagia kami.
         </p>
-        <h1 className="text-center font-cormorant uppercase text-2xl">Komang & Surya</h1>
-        <div className="h-[280px] w-[200px]">
-          <img
+        <h1 className="font-cormorant uppercase text-2xl">Komang & Surya</h1>
+        <div className="flex justify-center">
+          <Image
             src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766574530/foto_dummy/lume6_bazxai.webp"
             alt="komang & surya"
-            className="w-full h-full object-cover"
+            width={200}
+            height={280}
+            className="object-cover"
           />
         </div>
       </div>
-      <div className="flex flex-col gap-2 items-center justify-center">
+      <div className="space-y-2 text-center">
         <h1 className="text-center font-marcellus text-2xl">Kalyavitation</h1>
         <p className="text-center font-poppins font-extralight text-sm">
           © 2025 Kalyavitation. Digital Wedding Invitation
         </p>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center justify-center">
           <FaInstagram />
           <FaFacebook />
           <FaWhatsapp />

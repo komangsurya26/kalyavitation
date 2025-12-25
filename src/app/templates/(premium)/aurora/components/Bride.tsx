@@ -3,7 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 
 export function Bride() {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen snap-start">
       <Image
         src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766570962/foto_dummy/IMG_6784-2_ndotaq.webp"
         alt="Bride"

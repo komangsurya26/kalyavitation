@@ -2,8 +2,8 @@ export function Gallery() {
   const videoIdYoutube = "36s3J_eSy1k";
 
   return (
-    <div className="p-10 text-white h-screen">
-      <div className="flex flex-col justify-center items-center gap-2 w-full h-full">
+    <div className="p-10 text-white h-screen snap-start">
+      <div className="space-y-2 text-center w-full h-full">
         <h2 className="text-4xl font-playfair-display uppercase">Gallery</h2>
 
         <p className="text-xs font-poppins text-center font-light leading-4 max-w-md">
@@ -24,7 +24,7 @@ export function Gallery() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 overflow-y-auto h-[calc(100vh-30rem)] hide-scrollbar">
+        <div className="space-y-2 overflow-y-auto h-[calc(100vh-30rem)] hide-scrollbar">
           <div className="grid grid-cols-3 gap-2">
             {Array.from({ length: 3 }).map((_, index) => (
               <img

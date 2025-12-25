@@ -3,7 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 
 export function Groom() {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen snap-start">
       <Image
         src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766570962/foto_dummy/IMG_6805-2_g9diyf.webp"
         alt="Groom"

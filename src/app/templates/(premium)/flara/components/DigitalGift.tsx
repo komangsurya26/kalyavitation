@@ -18,7 +18,7 @@ export function DigitalGift() {
           <div className="h-px w-full bg-white" />
         </div>
       ))}
-      <div className="flex flex-col gap-4">
+      <div className="space-y-4">
         <h1 className="uppercase text-center font-marcellus text-xl">
           Konfirmasi kirim kado
         </h1>
@@ -26,12 +26,12 @@ export function DigitalGift() {
           <input
             placeholder="Tuliskan nama anda"
             type="text"
-            className="p-2 border bg-white/20 placeholder:text-sm"
+            className="p-2 border bg-white/20 placeholder:text-sm focus:outline-none"
           />
           <input
             placeholder="Nominal"
             type="text"
-            className="p-2 border bg-white/20 placeholder:text-sm"
+            className="p-2 border bg-white/20 placeholder:text-sm focus:outline-none"
           />
           <select
             name=""

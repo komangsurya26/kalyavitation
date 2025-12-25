@@ -2,31 +2,29 @@ import Image from "next/image";
 
 export function LoveStory() {
   return (
-    <div className="px-10 py-24 text-white">
-      <div className="flex flex-col gap-5">
-        <div className="w-[150px] h-[150px] relative">
-          <Image
-            src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766574528/foto_dummy/lume3_mvnp2o.webp"
-            alt=""
-            fill
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <h1 className="text-4xl font-cormorant uppercase">Journey of Love</h1>
-        <h1 className="text-2xl font-cormorant uppercase">Komang & Kalya</h1>
-        <div className="flex flex-col gap-2">
-          {Array.from({ length: 2 }).map((_, index) => (
-            <div key={index}>
-              <h1 className="font-marcellus uppercase">22 Desember 2025</h1>
-              <p className="font-poppins font-light text-sm">
-                Awal bertemu, Lorem ipsum dolor sit, amet consectetur
-                adipisicing elit. Iusto quod quas perferendis aperiam porro quam
-                sint minima alias eaque veritatis dignissimos recusandae optio
-                delectus sequi architecto a animi, qui exercitationem!
-              </p>
-            </div>
-          ))}
-        </div>
+    <div className="px-10 py-24 text-white space-y-5">
+      <div className="w-[150px] h-[150px] relative">
+        <Image
+          src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766574528/foto_dummy/lume3_mvnp2o.webp"
+          alt=""
+          fill
+          className="object-cover w-full h-full"
+        />
+      </div>
+      <h1 className="text-4xl font-cormorant uppercase">Journey of Love</h1>
+      <h1 className="text-2xl font-cormorant uppercase">Komang & Kalya</h1>
+      <div className="space-y-2">
+        {Array.from({ length: 2 }).map((_, index) => (
+          <div key={index}>
+            <h1 className="font-marcellus uppercase">22 Desember 2025</h1>
+            <p className="font-poppins font-light text-sm">
+              Awal bertemu, Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Iusto quod quas perferendis aperiam porro quam sint minima
+              alias eaque veritatis dignissimos recusandae optio delectus sequi
+              architecto a animi, qui exercitationem!
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );

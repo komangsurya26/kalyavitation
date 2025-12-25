@@ -40,7 +40,7 @@ export function HamburgerMenu({
         ref={menuRef}
         aria-label="Open menu"
         className={clsx(
-          "fixed top-4 right-4 z-50 w-28 h-10 rounded-full flex flex-col items-center justify-center gap-1",
+          "fixed top-4 right-4 z-100 w-28 h-10 rounded-full flex flex-col backdrop-blur-sm items-center justify-center gap-1",
           hasClicked ? "bg-transparent" : background || "bg-white/20"
         )}
         onClick={() => {

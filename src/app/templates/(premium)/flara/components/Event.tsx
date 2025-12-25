@@ -4,63 +4,35 @@ export function Event() {
       <h1 className="uppercase font-cormorant text-xl text-center mb-5">
         Save our date
       </h1>
-      <div className="flex flex-col gap-14">
-        <div className="flex flex-col items-center gap-2">
-          <h1 className="font-cormorant text-3xl uppercase">PEMBERKATAN</h1>
-          <div className="flex flex-col gap-2 text-center">
-            <span className="uppercase font-marcellus font-light">
-              Sabtu, 22 Desember 2025
-            </span>
-            <span className="font-poppins font-light text-sm uppercase">
-              10:00 WIB
-            </span>
+      <div className="space-y-14">
+        {Array.from({ length: 2 }).map((_, index) => (
+          <div key={index} className="space-y-4 text-center">
+            <h1 className="font-cormorant text-3xl uppercase">PEMBERKATAN</h1>
+            <div className="space-y-1">
+              <p className="uppercase font-marcellus font-light">
+                Sabtu, 22 Desember 2025
+              </p>
+              <p className="font-poppins font-light text-sm uppercase">
+                10:00 WITA - 12:00 WITA
+              </p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-poppins font-light text-sm">
+                Jl. Tua Buduk No.12, Kec. Mengwi, Kab. Badung, Bali
+              </p>
+              <div className="flex justify-center">
+                <a
+                  href=""
+                  className="px-4 py-1 bg-white/20 rounded-full hover:bg-white hover:text-black text-white"
+                >
+                  <span className="font-marcellus font-light text-sm uppercase">
+                    Google Maps
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col gap-2 text-center">
-            <span className="font-marcellus font-light uppercase">
-              Vue Palace Hotel
-            </span>
-            <span className="font-poppins font-light text-sm">
-              Jl. Otto Iskandar Dinata No.3, Babakan Ciamis, Kec. Sumur Bandung,
-              Kota Bandung
-            </span>
-          </div>
-          <a
-            href=""
-            className="px-4 py-1 bg-white/20 rounded-full hover:bg-white hover:text-black text-white"
-          >
-            <span className="font-marcellus font-light text-sm uppercase">
-              Google Maps
-            </span>
-          </a>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <h1 className="font-cormorant text-3xl uppercase">Resepsi</h1>
-          <div className="flex flex-col gap-2 text-center">
-            <span className="uppercase font-marcellus font-light">
-              Minggu, 23 Desember 2025
-            </span>
-            <span className="font-poppins font-light text-sm uppercase">
-              12:00 WIB
-            </span>
-          </div>
-          <div className="flex flex-col gap-2 text-center">
-            <span className="font-marcellus font-light uppercase">
-              Vue Palace Hotel
-            </span>
-            <span className="font-poppins font-light text-sm">
-              Jl. Otto Iskandar Dinata No.3, Babakan Ciamis, Kec. Sumur Bandung,
-              Kota Bandung
-            </span>
-          </div>
-          <a
-            href=""
-            className="px-4 py-1 bg-white/20 rounded-full hover:bg-white hover:text-black text-white"
-          >
-            <span className="font-marcellus font-light text-sm uppercase">
-              Google Maps
-            </span>
-          </a>
-        </div>
+        ))}
       </div>
     </div>
   );

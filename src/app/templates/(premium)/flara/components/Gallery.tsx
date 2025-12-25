@@ -1,16 +1,16 @@
 export function Gallery() {
   return (
     <div className="p-10 text-white">
-      <div className="flex flex-col items-center gap-6">
+      <div className="space-y-6 text-center">
         <h2 className="text-4xl font-cormorant uppercase">Gallery</h2>
-        <p className="text-sm font-poppins text-center font-extralight leading-4">
+        <p className="text-sm font-poppins font-extralight leading-4">
           I was created in time to fill your time, and I use all the time in my
           live to love you.
         </p>
         <h1 className="font-marcellus text-sm">
           Photo Video by Flara & Kelvin
         </h1>
-        <div className="flex flex-col gap-2">
+        <div className="space-y-2">
           <img
             src="https://res.cloudinary.com/dpij7jkkd/image/upload/v1766574530/foto_dummy/lume6_bazxai.webp"
             alt="Gallery"
