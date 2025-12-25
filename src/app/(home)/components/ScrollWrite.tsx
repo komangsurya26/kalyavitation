@@ -19,17 +19,14 @@ export function ScrollWrite({
 
   useGSAP(
     () => {
-      gsap.set("span", { opacity: 0 });
-
       gsap.to("span", {
         opacity: 1,
         stagger: 1,
         scrollTrigger: {
           trigger: textRef.current,
           start: "top 90%",
-          end: "bottom 50%", // jarak end scroll
+          end: "bottom 50%",
           scrub: true,
-          invalidateOnRefresh: true,
         },
       });
     },
