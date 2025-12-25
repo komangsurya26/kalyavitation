@@ -1,9 +1,10 @@
 "use client";
 
 import { Volume2, VolumeOff } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import clsx from "clsx";
+import { useGSAP } from "@gsap/react";
 
 type Props = {
   visible: boolean;
@@ -15,21 +16,24 @@ type Props = {
 export function AudioControl({ visible, playing, toggle, background }: Props) {
   const ref = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    if (!ref.current || !visible) return;
+  useGSAP(
+    () => {
+      if (!visible) return;
 
-    gsap.fromTo(
-      ref.current,
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: 1,
-        ease: "power3.out",
-      }
-    );
-  }, [visible]);
+      gsap.fromTo(
+        ref.current,
+        { opacity: 0, x: 50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          delay: 1,
+          ease: "power3.out",
+        }
+      );
+    },
+    { scope: ref, dependencies: [visible] }
+  );
 
   if (!visible) return null;
 

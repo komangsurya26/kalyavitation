@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import clsx from "clsx";
+import { useGSAP } from "@gsap/react";
 
 export function MenuOverlay({
   opened,
@@ -13,41 +14,42 @@ export function MenuOverlay({
 }) {
   const overlayRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!overlayRef.current) return;
-
-    if (opened) {
-      gsap.fromTo(
-        overlayRef.current,
-        {
+  useGSAP(
+    () => {
+      if (opened) {
+        gsap.fromTo(
+          overlayRef.current,
+          {
+            scale: 1,
+            opacity: 1,
+            top: "16px",
+            right: "16px",
+            height: "40px",
+            width: "112px",
+            display: "block",
+          },
+          {
+            duration: 1.5,
+            height: "45%",
+            width: window.innerWidth > 1024 ? "30%" : "90%",
+            ease: "power4.out",
+          }
+        );
+      } else {
+        gsap.to(overlayRef.current, {
           scale: 1,
           opacity: 1,
+          duration: 1,
+          ease: "power4.in",
           top: "16px",
           right: "16px",
           height: "40px",
           width: "112px",
-          display: "block",
-        },
-        {
-          duration: 1.5,
-          height: "45%",
-          width: window.innerWidth > 1024 ? "30%" : "90%",
-          ease: "power4.out",
-        }
-      );
-    } else {
-      gsap.to(overlayRef.current, {
-        scale: 1,
-        opacity: 1,
-        duration: 1,
-        ease: "power4.in",
-        top: "16px",
-        right: "16px",
-        height: "40px",
-        width: "112px",
-      });
-    }
-  }, [opened]);
+        });
+      }
+    },
+    { scope: overlayRef, dependencies: [opened] }
+  );
 
   return (
     <div

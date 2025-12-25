@@ -1,29 +1,25 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export function HeroImageLeft() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const items = containerRef.current.querySelectorAll(".text-item");
-
-    const ctx = gsap.context(() => {
-      gsap.from(items, {
+  useGSAP(
+    () => {
+      gsap.from(".text-item", {
         opacity: 0,
         y: 50,
         duration: 1.5,
         stagger: 0.3,
         ease: "power3.out",
       });
-    });
-
-    return () => ctx.revert();
-  }, []);
+    },
+    { scope: containerRef }
+  );
 
   return (
     <>

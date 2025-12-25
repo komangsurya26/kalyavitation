@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { HamburgerMenu } from "@/app/templates/(premium)/flara/components/HamburgerMenu";
 import { AudioControl } from "@/app/templates/(premium)/flara/components/AudioControl";
+import { useGSAP } from "@gsap/react";
 
 export function HeroOpening({
   scrollRef,
@@ -19,22 +20,18 @@ export function HeroOpening({
   const [audioPlaying, setAudioPlaying] = useState(false);
   const [showAudio, setShowAudio] = useState(false);
 
-  useEffect(() => {
-    if (!openingRef.current) return;
-    const items = openingRef.current.querySelectorAll(".hero-item");
-
-    const ctx = gsap.context(() => {
-      gsap.from(items, {
+  useGSAP(
+    () => {
+      gsap.from(".hero-item", {
         opacity: 0,
         scale: 0.8,
         duration: 2,
         stagger: 0.4,
         ease: "power3.out",
       });
-    });
-
-    return () => ctx.revert();
-  }, []);
+    },
+    { scope: openingRef }
+  );
 
   useEffect(() => {
     const el = scrollRef.current;

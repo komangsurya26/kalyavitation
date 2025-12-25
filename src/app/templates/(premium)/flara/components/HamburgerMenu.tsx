@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import { MenuOverlay } from "./MenuOverlay";
 import clsx from "clsx";
+import { useGSAP } from "@gsap/react";
 
 export function HamburgerMenu({
   visible,
@@ -16,21 +17,24 @@ export function HamburgerMenu({
   const [opened, setOpened] = useState(false);
   const [hasClicked, setHasClicked] = useState(false);
 
-  useEffect(() => {
-    if (!menuRef.current || !visible) return;
+  useGSAP(
+    () => {
+      if (!visible) return;
 
-    gsap.fromTo(
-      menuRef.current,
-      { opacity: 0, scale: 0.3 },
-      {
-        opacity: 1,
-        scale: 1,
-        duration: 2,
-        delay: 1,
-        ease: "power3.out",
-      }
-    );
-  }, [visible]);
+      gsap.fromTo(
+        menuRef.current,
+        { opacity: 0, scale: 0.3 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 2,
+          delay: 1,
+          ease: "power3.out",
+        }
+      );
+    },
+    { scope: menuRef, dependencies: [visible] }
+  );
 
   if (!visible) return null;
 
