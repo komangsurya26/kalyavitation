@@ -45,6 +45,7 @@
   --font-playfair-display: var(--font-playfair-display);
   --font-pinyon-script: var(--font-pinyon-script);
   --font-cormorant: var(--font-cormorant);
+  --font-great-vibes: var(--font-great-vibes);
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;

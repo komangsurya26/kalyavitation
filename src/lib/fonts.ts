@@ -4,6 +4,7 @@ import {
   Playfair_Display,
   Pinyon_Script,
   Cormorant,
+  Great_Vibes,
 } from "next/font/google";
 
 export const marcellus = Marcellus({
@@ -34,4 +35,10 @@ export const cormorant = Cormorant({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-cormorant",
+});
+
+export const greatVibes = Great_Vibes({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-great-vibes",
 });

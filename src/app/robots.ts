@@ -6,12 +6,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/dashboard"],
       },
       {
         userAgent: "Googlebot",
         allow: "/",
-        disallow: ["/api/", "/dashboard"],
       },
     ],
     sitemap: "https://kalyavitation.com/sitemap.xml",

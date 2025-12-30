@@ -5,6 +5,7 @@ import {
   playfairDisplay,
   pinyonScript,
   cormorant,
+  greatVibes,
 } from "@/lib/fonts";
 import "./globals.css";
 
@@ -62,6 +63,7 @@ export default function RootLayout({
           ${playfairDisplay.variable} 
           ${pinyonScript.variable} 
           ${cormorant.variable} 
+          ${greatVibes.variable} 
           antialiased
         `}
       >
