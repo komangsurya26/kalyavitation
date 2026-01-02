@@ -61,8 +61,8 @@ export const TEMPLATES: Record<string, Template[]> = {
   modern: [
     {
       id: 1,
-      name: "Harmony | 3D",
-      slug: "harmony",
+      name: "Clean | Modern",
+      slug: "clean",
       category: TemplateCategory.MODERN,
       cover: "/images/landing/hero1.webp",
       price: "Rp 0",
