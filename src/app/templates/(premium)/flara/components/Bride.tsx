@@ -19,7 +19,7 @@ export function Bride() {
           <h1 className="text-white text-3xl font-cormorant">
             Ni Putu Ayu Dewi
           </h1>
-          <div className="h-px w-full bg-white"></div>
+          <div className="h-px w-full bg-white" />
           <h1 className="text-white text-sm capitalize font-marcellus">
             putri pertama dari
           </h1>

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function Products() {
   return (
-    <div className="py-10 px-4 md:px-10 border-t border-neutral-400">
+    <div className="py-10 px-4 md:px-10 border-neutral-400">
       <Tabs defaultValue="premium" className="flex items-center justify-center">
         <TabsList className="rounded-full md:w-sm">
           <TabsTrigger
