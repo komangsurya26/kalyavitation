@@ -42,6 +42,11 @@ export const metadata: Metadata = {
     },
   },
   manifest: "/site.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "Kalyavitation",
+    statusBarStyle: "default",
+  },
 };
 
 export default function RootLayout({
