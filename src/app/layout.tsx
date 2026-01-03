@@ -41,11 +41,6 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: {
-    icon: "/favicon-96x96.png",
-    apple: "/apple-touch-icon.png",
-    shortcut: "/favicon-96x96.png",
-  },
   manifest: "/site.webmanifest",
 };
 
