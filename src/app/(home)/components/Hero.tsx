@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Hero.module.css";
 
 const heroImage = {
-  src: "https://ik.imagekit.io/l04prbcv1h/Kalyavitation/ChatGPT%20Image%2012%20Agu%202026,%2023.14.03%20(2).png",
+  src: "https://res.cloudinary.com/dpij7jkkd/image/upload/f_auto,q_auto:best,w_1920/v1786558490/Kalyavitation/ChatGPT_Image_12_Agu_2026_23.14.03_2_ttaeny.png",
   alt: "Template undangan digital premium Kalyavitation",
 };
 
