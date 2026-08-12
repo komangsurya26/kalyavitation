@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Hero.module.css";
 
 const heroImage = {
-  src: "https://res.cloudinary.com/dpij7jkkd/image/upload/v1786558490/Kalyavitation/ChatGPT_Image_12_Agu_2026_23.14.03_2_ttaeny.png",
+  src: "https://res.cloudinary.com/dpij7jkkd/image/upload/f_auto,q_auto/v1786558490/Kalyavitation/ChatGPT_Image_12_Agu_2026_23.14.03_2_ttaeny.png",
   alt: "Template undangan digital premium Kalyavitation",
 };
 
@@ -132,7 +132,7 @@ export function Hero() {
   }, [introDone, introLeaving]);
 
   return (
-    <section className="relative isolate min-h-svh overflow-hidden bg-[#1d120b] text-white">
+    <section className="relative z-900 isolate min-h-svh overflow-hidden bg-[#1d120b] text-white">
       <div
         className={`${
           introDone ? styles.heroContentReveal : styles.heroContentHidden
@@ -177,7 +177,7 @@ export function Hero() {
 
       <div
         className={`${styles.heroIntro} ${
-          introDone ? styles.heroIntroComplete : "fixed z-9999 bg-black"
+          introDone ? styles.heroIntroComplete : "fixed bg-black"
         } inset-0 flex flex-col items-center justify-center text-white ${
           introLeaving && !introDone ? styles.heroIntroLeaving : ""
         }`}
@@ -220,11 +220,9 @@ export function Hero() {
               }
             }}
           >
-            <Image
+            <img
               src={heroImage.src}
               alt={heroImage.alt}
-              fill
-              priority
               sizes="100vw"
               className="object-cover object-center"
             />

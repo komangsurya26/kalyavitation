@@ -35,7 +35,7 @@ export default function Navbar() {
       {/* Top Bar */}
       <div
         className={clsx(
-          "fixed top-0 inset-x-0 z-50 flex h-7 items-center justify-center border-b border-white/10 bg-black/20 text-white/75 backdrop-blur-sm",
+          "fixed top-0 inset-x-0 z-1000 flex h-7 items-center justify-center border-b border-white/10 bg-black/20 text-white/75 backdrop-blur-sm",
           "text-[9px] font-light uppercase tracking-[0.32em] md:text-[10px]",
           "transform transition-all duration-700 ease-in-out",
           introActive || hideTopBar
