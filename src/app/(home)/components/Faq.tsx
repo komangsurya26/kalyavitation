@@ -17,7 +17,7 @@ export function Faq() {
           <h2 className="text-3xl md:text-5xl font-marcellus leading-tight">
             Pertanyaan yang Sering Diajukan
           </h2>
-          <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light">
             Dapatkan jawaban cepat untuk pertanyaan Anda tentang layanan, proses
             pembuatan, dan fitur undangan digital kami. Kami telah merangkum
             pertanyaan yang paling sering ditanyakan oleh pengguna.
@@ -25,7 +25,7 @@ export function Faq() {
           <div className="pt-4">
             <a
               href="https://wa.me/6287782057548"
-              className="px-6 py-3 bg-neutral-800 text-white font-medium"
+              className="px-6 py-3 bg-neutral-800 text-white font-light"
             >
               Hubungi Kami
             </a>
@@ -38,7 +38,7 @@ export function Faq() {
               <AccordionTrigger className="text-start">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+              <AccordionContent className="font-light">{faq.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

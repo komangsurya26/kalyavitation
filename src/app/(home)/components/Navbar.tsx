@@ -71,7 +71,7 @@ export default function Navbar() {
             <Link href="/">Kalyavitation</Link>
           </h1>
 
-          <div className="hidden justify-center gap-8 text-[10px] font-light uppercase tracking-[0.28em] text-white/75 md:flex">
+          <div className="hidden justify-center gap-8 text-xs font-light uppercase tracking-[0.28em] text-white/75 md:flex">
             <Link href="/">Home</Link>
             <Link href="/templates/flara">Template</Link>
             <a href="https://app.kalyavitation.com">Order</a>
@@ -81,7 +81,7 @@ export default function Navbar() {
             href="https://app.kalyavitation.com"
             className={clsx(
               "justify-self-end border border-white/45 py-2 text-white transition duration-300 hover:bg-white hover:text-[#1d120b]",
-              "px-4 text-[10px] font-light uppercase tracking-[0.24em] sm:px-6"
+              "px-4 text-xs font-light uppercase tracking-[0.24em] sm:px-6"
             )}
           >
             DASHBOARD

@@ -3,9 +3,9 @@ import { ScrollWrite } from "./ScrollWrite";
 export function About() {
   return (
     <>
-      <div className="py-28">
+      <div className="py-15">
         <div className="flex items-center justify-center max-w-4xl mx-auto relative">
-          <p className="text-center text-sm font-light uppercase leading-loose tracking-[0.28em] opacity-10 sm:text-base md:text-2xl">
+          <p className="text-center text-sm font-light uppercase leading-loose tracking-[0.28em] opacity-10 sm:text-base">
             Di Kalyavitation, kami merancang undangan digital yang rapi dan
             berkelas untuk mereka yang peduli pada cara momen dibagikan. Setiap
             template dibuat dengan standar yang sama - menjaga kejelasan,
@@ -14,7 +14,7 @@ export function About() {
             sama bermaknanya.
           </p>
           <ScrollWrite
-            className="absolute top-0 left-0 text-center text-sm font-light uppercase leading-loose tracking-[0.28em] opacity-100 sm:text-base md:text-2xl"
+            className="absolute top-0 left-0 text-center text-sm font-light uppercase leading-loose tracking-[0.28em] opacity-100 sm:text-base"
             text="Di Kalyavitation, kami merancang undangan digital yang rapi dan berkelas
             untuk mereka yang peduli pada cara momen dibagikan. Setiap template dibuat
             dengan standar yang sama - menjaga kejelasan, kualitas, dan detail di balik

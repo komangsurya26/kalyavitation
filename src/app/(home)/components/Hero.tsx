@@ -114,7 +114,7 @@ export function Hero() {
         } relative z-10 flex h-svh flex-col items-center justify-center px-5 text-center`}
         style={{ transform: `translate3d(0, ${scrollY * -0.08}px, 0)` }}
       >
-        <p className="mb-5 text-xs font-light uppercase tracking-[0.5em] text-white/70">
+        <p className="mb-5 text-sm font-light uppercase tracking-[0.5em] text-white/70">
           Digital Invitation
         </p>
         <h1 className="font-playfair-display text-[clamp(3.6rem,10vw,9rem)] font-medium uppercase leading-none">
@@ -143,7 +143,7 @@ export function Hero() {
           href="https://app.kalyavitation.com"
           className="group flex flex-col items-center gap-3 text-white/75 transition hover:text-white"
         >
-          <p className="text-[10px] font-light uppercase tracking-[0.38em]">
+          <p className="text-xs font-light uppercase tracking-[0.38em]">
             Coba Sekarang
           </p>
           <ChevronDown className="h-5 w-5 transition duration-300 group-hover:translate-y-1" />
