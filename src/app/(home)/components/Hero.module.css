@@ -16,26 +16,29 @@
   animation: none;
 }
 
-.heroIntroComplete .heroIntroInlinePhoto {
+.heroIntroComplete .heroIntroPhotoWindow {
   animation: none;
-  filter: none;
+  clip-path: inset(0);
   opacity: 1;
-  transform: scale(var(--hero-intro-cover-scale)) translate3d(0, 0, 0);
-  width: clamp(4.5rem, 14vw, 10rem);
 }
 
 .heroIntroLeaving {
-  animation: hero-intro-out 0.9s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation: hero-intro-out 1.45s cubic-bezier(0.76, 0, 0.24, 1) forwards;
 }
 
 .heroIntroText {
-  animation: hero-title-reveal 1.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  clip-path: inset(0 0 100% 0);
-  opacity: 0;
+  clip-path: inset(0);
+  opacity: 1;
+}
+
+.heroIntroTextLeft {
+  animation: hero-title-split-left 0.8s cubic-bezier(0.76, 0, 0.24, 1)
+    forwards;
 }
 
 .heroIntroTextRight {
-  animation-delay: 0.12s;
+  animation: hero-title-split-right 0.8s cubic-bezier(0.76, 0, 0.24, 1)
+    forwards;
 }
 
 .heroIntroTextComplete {
@@ -43,44 +46,31 @@
   visibility: hidden;
 }
 
-.heroIntroInlinePhoto {
-  animation: hero-intro-photo-in 1.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  aspect-ratio: 4 / 5;
-  display: inline-block;
-  flex: 0 0 auto;
-  filter: none;
+.heroIntroPhotoWindow {
+  animation: hero-intro-photo-mask-in 1.2s cubic-bezier(0.65, 0, 0.35, 1)
+    forwards;
+  clip-path: inset(47% 50% 47% 50%);
+  inset: 0;
   opacity: 0;
-  overflow: hidden;
-  position: relative;
-  transform-origin: center center;
-  vertical-align: middle;
-  width: clamp(4.5rem, 14vw, 10rem);
+  position: absolute;
   z-index: 20;
 }
 
-.heroIntroInlinePhoto img {
-  image-rendering: auto;
-  transform-origin: center center;
+.heroIntroPhotoWindow img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
-.heroIntroInlinePhoto::after {
-  background:
-    radial-gradient(circle at center, transparent 0%, rgb(0 0 0 / 0.42) 76%),
-    linear-gradient(to bottom, rgb(0 0 0 / 0.24), rgb(0 0 0 / 0.52));
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-}
-
-.heroIntroLeaving .heroIntroInlinePhoto {
-  animation: hero-intro-photo-open 1.45s cubic-bezier(0.76, 0, 0.24, 1)
+.heroIntroLeaving .heroIntroPhotoWindow {
+  animation: hero-intro-photo-mask-open 1.45s cubic-bezier(0.76, 0, 0.24, 1)
     forwards;
-  z-index: 60;
+  opacity: 1;
 }
 
 .heroIntroLogo {
-  animation: hero-logo-in 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: none;
   overflow: visible;
 }
 
@@ -164,44 +154,63 @@
   }
 }
 
-@keyframes hero-intro-photo-in {
-  0% {
-    clip-path: inset(0 48% 0 48%);
-    opacity: 0;
-    transform: scaleY(0.86) translateY(22px);
-    width: clamp(2rem, 4vw, 3rem);
-  }
-
-  42% {
-    clip-path: inset(0 44% 0 44%);
-    opacity: 1;
-    transform: scaleY(1) translateY(0);
-    width: clamp(2rem, 4vw, 3rem);
-  }
-
-  100% {
+@keyframes hero-title-split-left {
+  from {
     clip-path: inset(0 0 0 0);
     opacity: 1;
-    transform: scaleY(1) translateY(0);
-    width: clamp(4.5rem, 14vw, 10rem);
+    transform: translateX(0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    transform: translateX(-1.2em);
   }
 }
 
-@keyframes hero-intro-photo-open {
-  0% {
+@keyframes hero-title-split-right {
+  from {
     clip-path: inset(0 0 0 0);
-    filter: none;
     opacity: 1;
-    transform: scale(1) translate3d(0, 0, 0);
-    width: clamp(4.5rem, 14vw, 10rem);
+    transform: translateX(0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    transform: translateX(1.2em);
+  }
+}
+
+@keyframes hero-intro-photo-mask-in {
+  0% {
+    clip-path: inset(47% 50% 47% 50%);
+    opacity: 0;
+  }
+
+  15% {
+    clip-path: inset(47% 50% 47% 50%);
+    opacity: 1;
+  }
+
+  45% {
+    clip-path: inset(45% 47% 45% 47%);
+    opacity: 1;
   }
 
   100% {
-    clip-path: inset(0 0 0 0);
-    filter: none;
+    clip-path: inset(42% 43% 42% 43%);
     opacity: 1;
-    transform: scale(var(--hero-intro-cover-scale)) translate3d(0, 0, 0);
-    width: clamp(4.5rem, 14vw, 10rem);
+  }
+}
+
+@keyframes hero-intro-photo-mask-open {
+  from {
+    clip-path: inset(42% 43% 42% 43%);
+  }
+
+  to {
+    clip-path: inset(0);
   }
 }
 

@@ -2,8 +2,6 @@
 
 import { TypewriterText } from "@/components/shared/TypewriterText";
 import { ChevronDown } from "lucide-react";
-import Image from "next/image";
-import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Hero.module.css";
 
@@ -20,7 +18,6 @@ const introProgressNumbers = Array.from({ length: 101 }, (_, index) => index);
 export function Hero() {
   const originalOverflowRef = useRef("");
   const [scrollY, setScrollY] = useState(0);
-  const [introCoverScale, setIntroCoverScale] = useState(10);
   const [introProgressComplete, setIntroProgressComplete] = useState(false);
   const [introDone, setIntroDone] = useState(false);
   const [introLeaving, setIntroLeaving] = useState(false);
@@ -41,28 +38,6 @@ export function Hero() {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const updateIntroCoverScale = () => {
-      const viewportWidth = window.innerWidth;
-      const viewportHeight = window.innerHeight;
-      const photoWidth = Math.min(
-        Math.max(4.5 * 16, viewportWidth * 0.14),
-        10 * 16,
-      );
-      const photoHeight = photoWidth * 1.25;
-      const coverScale =
-        Math.max(viewportWidth / photoWidth, viewportHeight / photoHeight) *
-        1.04;
-
-      setIntroCoverScale(coverScale);
-    };
-
-    updateIntroCoverScale();
-    window.addEventListener("resize", updateIntroCoverScale);
-
-    return () => window.removeEventListener("resize", updateIntroCoverScale);
   }, []);
 
   useEffect(() => {
@@ -197,6 +172,16 @@ export function Hero() {
             />
           </div>
         )}
+        <div
+          className={styles.heroIntroPhotoWindow}
+          onAnimationEnd={(event) => {
+            if (introLeaving && !introDone && event.currentTarget === event.target) {
+              completeIntro();
+            }
+          }}
+        >
+          <img src={heroImage.src} alt={heroImage.alt} />
+        </div>
         <h2
           className={`${styles.heroIntroLogo} relative z-10 flex items-center justify-center gap-[clamp(0.75rem,2vw,1.5rem)] font-playfair-display text-[clamp(2.8rem,8vw,7rem)] font-medium uppercase leading-none`}
         >
@@ -206,26 +191,6 @@ export function Hero() {
             }`}
           >
             Kalya
-          </span>
-          <span
-            className={styles.heroIntroInlinePhoto}
-            style={
-              {
-                "--hero-intro-cover-scale": introCoverScale,
-              } as CSSProperties
-            }
-            onAnimationEnd={(event) => {
-              if (introLeaving && event.currentTarget === event.target) {
-                completeIntro();
-              }
-            }}
-          >
-            <img
-              src={heroImage.src}
-              alt={heroImage.alt}
-              sizes="100vw"
-              className="object-cover object-center"
-            />
           </span>
           <span
             className={`${styles.heroIntroText} ${styles.heroIntroTextRight} ${
