@@ -3,7 +3,7 @@ import { ScrollWrite } from "./ScrollWrite";
 export function About() {
   return (
     <>
-      <div className="py-15">
+      <div className="py-10">
         <div className="flex items-center justify-center max-w-4xl mx-auto relative">
           <p className="text-center text-sm font-light uppercase leading-loose tracking-[0.28em] opacity-10 sm:text-base">
             Di Kalyavitation, kami merancang undangan digital yang rapi dan
