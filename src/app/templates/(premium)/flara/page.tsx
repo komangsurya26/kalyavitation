@@ -28,23 +28,35 @@ export default function FlaraPage() {
       >
         <Background />
 
-        <HeroOpening scrollRef={scrollRef} />
+        <section id="home">
+          <HeroOpening scrollRef={scrollRef} />
+        </section>
 
-        <Bride />
+        <section id="bride-groom">
+          <Bride />
 
-        <Groom />
+          <Groom />
+        </section>
 
         <LoveStory />
 
         <Countdown />
 
-        <Event />
+        <section id="wedding-event">
+          <Event />
+        </section>
 
-        <Gallery />
+        <section id="gallery">
+          <Gallery />
+        </section>
 
-        <Rsvp />
+        <section id="rsvp">
+          <Rsvp />
+        </section>
 
-        <Gift />
+        <section id="gift">
+          <Gift />
+        </section>
 
         <Footer />
 
