@@ -139,13 +139,6 @@ export function MenuOverlay({
               </button>
             ))}
           </div>
-
-          <p
-            data-menu-item
-            className="font-marcellus text-[9px] uppercase tracking-[0.3em] text-white/50"
-          >
-            Kalyavitation
-          </p>
         </div>
       </nav>
     </div>
