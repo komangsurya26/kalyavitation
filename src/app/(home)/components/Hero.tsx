@@ -9,6 +9,10 @@ const heroImage = {
   src: "https://res.cloudinary.com/dpij7jkkd/image/upload/f_auto,q_auto/v1786558493/Kalyavitation/ChatGPT_Image_12_Agu_2026_23.14.02_1_t8izpx.png",
   alt: "Template undangan digital premium Kalyavitation",
 };
+const heroVideo = {
+  src: "https://res.cloudinary.com/dpij7jkkd/video/upload/v1790318831/YTDown.com_YouTube_Kresna-_-Deky-CINEMATIC-PREWEDDING-BALI_Media_x0v6L-87Hs_001_1080p_wslmey.mp4",
+  alt: "Template undangan digital premium Kalyavitation",
+};
 
 const INTRO_PROGRESS_FALLBACK_MS = 3500;
 const INTRO_LEAVE_DELAY_MS = 450;
@@ -175,12 +179,36 @@ export function Hero() {
         <div
           className={styles.heroIntroPhotoWindow}
           onAnimationEnd={(event) => {
-            if (introLeaving && !introDone && event.currentTarget === event.target) {
+            if (
+              introLeaving &&
+              !introDone &&
+              event.currentTarget === event.target
+            ) {
               completeIntro();
             }
           }}
         >
-          <img src={heroImage.src} alt={heroImage.alt} />
+          {/* Mobile */}
+          <img
+            className={styles.heroIntroMobileMedia}
+            src={heroImage.src}
+            alt={heroImage.alt}
+          />
+
+          {/* Desktop / Laptop */}
+          <video
+            className={styles.heroIntroDesktopMedia}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          >
+            <source
+              src={heroVideo.src}
+              type="video/mp4"
+            />
+          </video>
         </div>
         <h2
           className={`${styles.heroIntroLogo} relative z-10 flex items-center justify-center gap-[clamp(0.75rem,2vw,1.5rem)] font-playfair-display text-[clamp(2.8rem,8vw,7rem)] font-medium uppercase leading-none`}
